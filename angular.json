@@ -20,8 +20,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
               "src/assets/images",
+              "src/assets",
               "src/api"
             ],
             "styles": ["src/styles.css"],
@@ -77,7 +77,12 @@
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/api"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/images",
+              "src/assets",
+              "src/api"
+            ],
             "styles": ["src/styles.css"],
             "scripts": []
           }

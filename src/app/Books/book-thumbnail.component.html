@@ -1,0 +1,15 @@
+<div class="thumbnail border-none flex flex-col itme justify-center">
+  <a [routerLink]="['/books', book?.id]">
+    <div class="px-4 py-1">
+      <img
+        src="{{ book?.imageLink }}"
+        alt="No Image"
+        class="max-h-64 min-h-64 max-w-40 min-w-40"
+      />
+    </div>
+    <div class="flex text-center justify-center">{{ book?.title }}</div>
+    <div class="flex text-center justify-center italic">
+      -{{ book?.author }}
+    </div>
+  </a>
+</div>
