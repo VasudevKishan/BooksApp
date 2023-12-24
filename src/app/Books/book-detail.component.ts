@@ -6,6 +6,26 @@ import { BookService } from './book-service';
 
 @Component({
   templateUrl: './book-detail.component.html',
+  styles: [
+    `
+      td,
+      th {
+        border: 1px;
+        padding: 20px;
+
+        border-collapse: collapse;
+      }
+
+      .bookTitle {
+        font-size: 2.25rem /* 36px */;
+        line-height: 2.5rem /* 40px */;
+      }
+      td {
+        font-size: 1.2rem /* 36px */;
+        line-height: 2rem /* 40px */;
+      }
+    `,
+  ],
 })
 export class BookDetailComponent implements OnInit, OnDestroy {
   PageTitle: string = 'Book Details';

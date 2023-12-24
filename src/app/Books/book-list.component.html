@@ -1,6 +1,6 @@
 <div>
   <H1 class="font-bold font-serif p-10 text-5xl">{{ pageTitle }}</H1>
-  <div class="m-auto grid grid-cols-5" style="width: 100%">
+  <div class="m-auto px-5 grid grid-cols-5 w-full">
     <div *ngFor="let book of books" class="mx-2 px-1 py-3 pb-6 items-center">
       <book-thumbnail [book]="book"></book-thumbnail>
     </div>
