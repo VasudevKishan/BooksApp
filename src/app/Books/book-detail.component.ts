@@ -42,7 +42,10 @@ export class BookDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.sub = this.bookService.getBook(id).subscribe({
-      next: (book) => (this.book = book),
+      next: (book) =>
+        book != null
+          ? (this.book = book)
+          : (this.errorMsg = 'Book does not exist'),
       error: (err) => (this.errorMsg = err),
     });
   }

@@ -7,9 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BookThumbnail } from './book-thumbnail';
 import { AppRoutingModule } from '../app-routing.module';
+import { AddBookComponent } from './add-book.component';
 
 @NgModule({
-  declarations: [BookListComponent, BookDetailComponent, BookThumbnail],
+  declarations: [
+    BookListComponent,
+    BookDetailComponent,
+    BookThumbnail,
+    AddBookComponent,
+  ],
   imports: [FormsModule, HttpClientModule, CommonModule, AppRoutingModule],
 })
 export class BookModule {}

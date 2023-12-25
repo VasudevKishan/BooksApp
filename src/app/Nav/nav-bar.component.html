@@ -2,9 +2,15 @@
   class="w-screen h-12 bg-gray-400 dark:bg-gray-800 fixed text-black dark:text-slate-200 font-bold pl-2 flex"
 >
   <div
-    class="font-serif pt-1 text-3xl w-36 text-center"
+    class="font-serif pt-1 mr-5 px-4 text-3xl w-36 text-center hover:bg-gray-600"
     [routerLink]="['/books']"
   >
     Library
+  </div>
+  <div
+    class="font-serif mx-5 pt-2 px-4 text-xl w-auto text-center hover:bg-gray-600"
+    [routerLink]="['/books/addbook']"
+  >
+    Add Book
   </div>
 </div>

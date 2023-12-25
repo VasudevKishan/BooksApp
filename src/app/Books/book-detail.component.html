@@ -3,30 +3,31 @@
     <h1 class="font-bold font-serif p-10 text-5xl">Book Details</h1>
     <hr class="h-px mb-8 bg-gray-200 border-0 dark:bg-gray-500" />
     <div class="px-12 text-left">
-      <table class="table-auto" style="width: 1100px">
+      <div *ngIf="this.book == null">{{ errorMsg }}</div>
+      <table class="table-auto" style="width: 1100px" *ngIf="this.book != null">
         <tr>
           <td style="width: 300px; height: 450px">
             <img
               class=""
               width="260px"
               height="400"
-              src="{{ book?.imageLink }}"
+              src="{{ book.imageLink }}"
             />
           </td>
           <td class="align-top">
             <span class="bookTitle font-bold">
-              {{ book?.title }}
+              {{ book.title }}
             </span>
             <br />
             <span class="italic">
-              {{ book?.author }}
+              {{ book.author }}
             </span>
             <br />
-            in {{ book?.language }}
+            in {{ book.language }}
             <br />
-            Pages - {{ book?.pages }}
+            Pages - {{ book.pages }}
             <br />
-            {{ book?.year }}, {{ book?.country }}
+            {{ book.year }}, {{ book.country }}
             <br />
             <br />
             <br />
@@ -36,7 +37,7 @@
             <br />
             <p>
               <a
-                href="{{ book?.link }}"
+                href="{{ book.link }}"
                 target="_blank"
                 class="hover:text-blue-600"
                 >View More</a
@@ -60,4 +61,4 @@
     "pages": 209,
     "title": "Things Fall Apart",
     "year": 1958
- -->
+-->
