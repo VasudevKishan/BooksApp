@@ -1,53 +1,54 @@
-<div class="h-screen container" style="width: 1152px">
-  <div class="px-12 pt-12 text-left">
-    <h1 class="font-bold font-serif p-10 text-5xl">Book Detail</h1>
-
-    <table class="table-auto" style="width: 1100px">
-      <tr>
-        <td style="width: 300px; height: 450px">
-          <img
-            class=""
-            width="260px"
-            height="400"
-            src="{{ book?.imageLink }}"
-          />
-        </td>
-        <td class="align-top">
-          <span class="bookTitle font-bold">
-            {{ book?.title }}
-          </span>
-          <br />
-          <span class="italic">
-            {{ book?.author }}
-          </span>
-          <br />
-          in {{ book?.language }}
-          <br />
-          Pages - {{ book?.pages }}
-          <br />
-          {{ book?.year }}, {{ book?.country }}
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <p>
-            <a
-              href="{{ book?.link }}"
-              target="_blank"
-              class="hover:text-blue-600"
-              >View More</a
-            >
-          </p>
-        </td>
-        <td></td>
-      </tr>
-    </table>
+<div>
+  <div class="h-screen" style="width: 1152px">
+    <h1 class="font-bold font-serif p-10 text-5xl">Book Details</h1>
+    <hr class="h-px mb-8 bg-gray-200 border-0 dark:bg-gray-500" />
+    <div class="px-12 text-left">
+      <table class="table-auto" style="width: 1100px">
+        <tr>
+          <td style="width: 300px; height: 450px">
+            <img
+              class=""
+              width="260px"
+              height="400"
+              src="{{ book?.imageLink }}"
+            />
+          </td>
+          <td class="align-top">
+            <span class="bookTitle font-bold">
+              {{ book?.title }}
+            </span>
+            <br />
+            <span class="italic">
+              {{ book?.author }}
+            </span>
+            <br />
+            in {{ book?.language }}
+            <br />
+            Pages - {{ book?.pages }}
+            <br />
+            {{ book?.year }}, {{ book?.country }}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>
+              <a
+                href="{{ book?.link }}"
+                target="_blank"
+                class="hover:text-blue-600"
+                >View More</a
+              >
+            </p>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
-
 <!-- 
 
   "id": 1,
