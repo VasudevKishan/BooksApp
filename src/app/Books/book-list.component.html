@@ -1,1 +1,9 @@
-<H1>Books List</H1>
+<div class="h-full" style="width: 1152px">
+  <H1 class="font-bold font-serif p-10 text-5xl">{{ pageTitle }}</H1>
+  <hr class="h-px mb-8 bg-gray-200 border-0 dark:bg-gray-500" />
+  <div class="m-auto px-5 grid grid-cols-5 w-full">
+    <div *ngFor="let book of books" class="mx-2 px-1 py-3 pb-6 items-center">
+      <book-thumbnail [book]="book"></book-thumbnail>
+    </div>
+  </div>
+</div>

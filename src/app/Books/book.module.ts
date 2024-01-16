@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BookListComponent } from './book-list.component';
 import { BookDetailComponent } from './book-detail.component';
-import { RouterModule } from '@angular/router';
+
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { BookThumbnail } from './book-thumbnail';
+import { AppRoutingModule } from '../app-routing.module';
+import { AddBookComponent } from './add-book.component';
 
 @NgModule({
-  declarations: [BookListComponent, BookDetailComponent],
-  imports: [FormsModule],
+  declarations: [
+    BookListComponent,
+    BookDetailComponent,
+    BookThumbnail,
+    AddBookComponent,
+  ],
+  imports: [FormsModule, HttpClientModule, CommonModule, AppRoutingModule],
 })
 export class BookModule {}
