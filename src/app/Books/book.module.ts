@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BookListComponent } from './book-list.component';
 import { BookDetailComponent } from './book-detail.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BookThumbnail } from './book-thumbnail';
@@ -16,6 +16,12 @@ import { AddBookComponent } from './add-book.component';
     BookThumbnail,
     AddBookComponent,
   ],
-  imports: [FormsModule, HttpClientModule, CommonModule, AppRoutingModule],
+  imports: [
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
 })
 export class BookModule {}
