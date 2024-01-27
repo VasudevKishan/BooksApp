@@ -28,4 +28,17 @@ export class BookService {
       map((books: IBook[]) => books.find((b) => b.id === id))
     );
   }
+  //TODO:
+  // getNewId(): number {
+  //   let max = NaN;
+  //   this.getBooks().pipe(
+  //     map((books) => {
+  //       max = books.reduce((book, currBook) => {
+  //         return book.id.valueOf() > currBook.id.valueOf() ? book : currBook;
+  //       }).id;
+  //       return max;
+  //     })
+  //   );
+  //   return max;
+  // }
 }

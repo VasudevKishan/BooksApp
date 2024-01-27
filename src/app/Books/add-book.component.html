@@ -3,53 +3,79 @@
     <h1 class="font-bold font-serif p-10 text-5xl">Add Book</h1>
     <hr class="h-px mb-8 bg-gray-200 border-0 dark:bg-gray-500" />
     <div class="px-12 text-left">
-      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div
+        *ngIf="!validInput && emptyData"
+        class="border-2 border-red-800 bg-red-600 text-center rounded-3xl"
+      >
+        {{ invalidDataMsg }}
+      </div>
+      <form (ngSubmit)="onSubmit()">
         <table
           class="table-auto min-w-full border-spacing-3 border-white border-separate"
         >
           <tr>
+            <td>Id</td>
+            <td>
+              <input type="number" [(ngModel)]="book.id" name="id" />
+            </td>
+          </tr>
+          <tr>
             <td>Title</td>
-            <td><input type="text" formControlName="title" /></td>
+            <td>
+              <input type="text" [(ngModel)]="book.title" name="title" />
+            </td>
           </tr>
 
           <tr>
             <td>Author</td>
-            <td><input type="text" formControlName="author" /></td>
+            <td>
+              <input type="text" [(ngModel)]="book.author" name="author" />
+            </td>
           </tr>
 
           <tr>
             <td>Country</td>
-            <td><input type="text" formControlName="country" /></td>
+            <td>
+              <input type="text" [(ngModel)]="book.country" name="country" />
+            </td>
           </tr>
 
           <tr>
             <td>Pages</td>
-            <td><input type="text" formControlName="pages" /></td>
+            <td>
+              <input type="number" [(ngModel)]="book.pages" name="pages" />
+            </td>
           </tr>
 
           <tr>
             <td>Language</td>
-            <td><input type="text" formControlName="language" /></td>
+            <td>
+              <input type="text" [(ngModel)]="book.language" name="language" />
+            </td>
           </tr>
 
           <tr>
             <td>Year</td>
-            <td><input type="text" formControlName="year" /></td>
+            <td>
+              <input type="number" [(ngModel)]="book.year" name="year" />
+            </td>
           </tr>
 
           <tr>
             <td>Link</td>
-            <td><input type="text" formControlName="link" /></td>
+            <td>
+              <input type="text" [(ngModel)]="book.link" name="link" />
+            </td>
           </tr>
 
           <tr>
             <td>Image</td>
-            <td><input type="file" /></td>
+            <td><input type="file" (change)="getFile($event)" /></td>
           </tr>
           <tr>
             <td>
               <button
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-slate-500"
                 type="submit"
               >
                 Submit
