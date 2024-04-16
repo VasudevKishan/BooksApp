@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 })
 export class BookListComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Books';
+  searchInputPlaceholder: string = 'Search for something';
   constructor(private bookService: BookService) {}
   sub!: Subscription;
   books: IBook[] = [];
@@ -28,7 +29,7 @@ export class BookListComponent implements OnInit, OnDestroy {
     return this.books.filter(
       (book: IBook) =>
         book.title.toLowerCase().includes(filterBy) ||
-        book.author.toLowerCase().includes(filterBy)
+        book.author.toLowerCase().includes(filterBy),
     );
   }
 

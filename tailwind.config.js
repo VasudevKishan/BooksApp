@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       display: ["Inter", "sans-serif"],
       emph: ["Rokitt", "serif"],
+      head: ["Montserrat", "serif"],
     },
     extend: {},
   },

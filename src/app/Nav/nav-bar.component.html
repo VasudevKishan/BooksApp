@@ -1,14 +1,23 @@
-<div class="flex justify-between items-center w-full bg-white fixed px-4 py-2">
-  <div class="text-4xl">Library</div>
-  <!-- [routerLink]="['/books']" -->
+<div
+  class="flex justify-between items-center w-full bg-white sticky top-0 px-4 py-4"
+>
+  <div
+    [routerLink]="['/books']"
+    class="text-4xl flex justify-center gap-4 hover:cursor-pointer"
+  >
+    <i class="fa-solid fa-book"></i>
+    <p class="font-bold font-head">Library</p>
+  </div>
 
   <div class="">
     <button
       type="button"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      [routerLink]="['/books/addbook']"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center items-center gap-2"
     >
+      <i class="fa-solid fa-plus"></i>
       Add book
     </button>
-    <!-- [routerLink]="['/books/addbook']" -->
+    <!--  -->
   </div>
 </div>
