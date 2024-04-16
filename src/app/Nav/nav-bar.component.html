@@ -1,17 +1,23 @@
 <div
-  class="w-screen h-12 bg-gray-400 dark:bg-gray-800 fixed text-black dark:text-slate-200 font-bold pl-2 flex"
+  class="flex justify-between items-center w-full bg-white sticky top-0 px-4 py-4"
 >
   <div
-    class="font-serif pt-1 mr-5 px-4 text-3xl w-36 text-center hover:bg-gray-600"
     [routerLink]="['/books']"
+    class="text-4xl flex justify-center gap-4 hover:cursor-pointer"
   >
-    Library
+    <i class="fa-solid fa-book"></i>
+    <p class="font-bold font-head">Library</p>
   </div>
 
-  <div
-    class="font-serif mx-5 pt-2 px-4 text-xl w-auto text-center hover:bg-gray-600 ml-auto mr-5"
-    [routerLink]="['/books/addbook']"
-  >
-    Add Book
+  <div class="">
+    <button
+      type="button"
+      [routerLink]="['/books/addbook']"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center items-center gap-2"
+    >
+      <i class="fa-solid fa-plus"></i>
+      Add book
+    </button>
+    <!--  -->
   </div>
 </div>
